@@ -12,6 +12,7 @@ specifiers:
   '@types/node': ^12.0.0
   '@typescript-eslint/eslint-plugin': ^5.46.0
   '@typescript-eslint/parser': ^5.46.0
+  '@uniswap/v3-core': ^1.0.1
   chai: ^4.2.0
   coverage: ^0.4.1
   dotenv: ^10.0.0
@@ -39,6 +40,7 @@ specifiers:
 
 dependencies:
   '@openzeppelin/contracts': 4.8.0
+  '@uniswap/v3-core': 1.0.1
 
 devDependencies:
   '@nomiclabs/hardhat-ethers': /hardhat-deploy-ethers/0.3.0-beta.13_yab2ug5tvye2kp6e24l5x3z7uy
@@ -1478,6 +1480,11 @@ packages:
       '@typescript-eslint/types': 5.46.0
       eslint-visitor-keys: 3.3.0
     dev: true
+
+  /@uniswap/v3-core/1.0.1:
+    resolution: {integrity: sha512-7pVk4hEm00j9tc71Y9+ssYpO6ytkeI0y7WE9P6UcmNzhxPePwyAxImuhVsTqWK9YFvzgtvzJHi64pBl4jUzKMQ==}
+    engines: {node: '>=10'}
+    dev: false
 
   /@yarnpkg/lockfile/1.1.0:
     resolution: {integrity: sha512-GpSwvyXOcOOlV70vbnzjj4fW5xW/FdUF6nQEt1ENy7m4ZCczi1+/buVUPAqmGfqznsORNFzUMjctTIp8a9tuCQ==}
