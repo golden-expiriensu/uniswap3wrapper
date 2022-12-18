@@ -7,6 +7,13 @@ import {Address} from "./Address.sol";
 error AmountInIsTooLarge();
 
 library SqrtPriceX96Math {
+    /// @notice Gets an estimate receive amount from the swap within single tick
+    /// @dev Should not be used in precise calculations
+    /// @param _tokenIn Token to spend
+    /// @param _tokenOut Token to receive
+    /// @param _amountIn Amount of _tokenIn to spend in swap
+    /// @param _sqrtPriceX96 Price corresponding to current tick (TickMath.getSqrtRatioAtTick(tick))
+    /// @return amountOut_ Estimated amount of _tokenOut to get after swap
     function getAmountOutWithinSingleTick(
         address _tokenIn,
         address _tokenOut,
