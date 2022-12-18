@@ -20,7 +20,7 @@ contract UniswapWrapper {
     /// @param _tokenOut Token to receive
     /// @param _amountIn Amount of _tokenIn to spend in swap
     /// @param _fee Pool fee (300, 5000, 10000)
-    function getAmountOut(
+    function _getAmountOut(
         address _tokenIn,
         address _tokenOut,
         uint256 _amountIn,
@@ -28,14 +28,14 @@ contract UniswapWrapper {
     ) internal view returns (uint256) {
         address pool = uniswapV3Factory.getPool(_tokenIn, _tokenOut, _fee);
 
-        return getAmountOut(_tokenIn, _tokenOut, _amountIn, pool);
+        return _getAmountOut(_tokenIn, _tokenOut, _amountIn, pool);
     }
 
     /// @param _tokenIn Token to spend
     /// @param _tokenOut Token to receive
     /// @param _amountIn Amount of _tokenIn to spend in swap
     /// @param _pool Address of the pool to use
-    function getAmountOut(
+    function _getAmountOut(
         address _tokenIn,
         address _tokenOut,
         uint256 _amountIn,
