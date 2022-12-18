@@ -3,12 +3,7 @@ import { BigNumber } from 'ethers'
 import { ethers } from 'hardhat'
 
 import { MockSqrtX96Price, MockSqrtX96Price__factory } from '../typechain'
-
-const format18 = (value: string | BigNumber) => ethers.utils.formatEther(value)
-const format6 = (value: string | BigNumber) => ethers.utils.formatUnits(value, 6)
-
-const parse18 = (value: string | number) => ethers.utils.parseEther(value.toString())
-const parse6 = (value: string | number) => ethers.utils.parseUnits(value.toString(), 6)
+import { format18, format6, parse18, parse6 } from './helpers'
 
 const address00 = ethers.constants.AddressZero
 const address01 = address00.substring(0, 41) + '1'
