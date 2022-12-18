@@ -12,7 +12,7 @@ abstract contract UniswapPriceGetter is ImmutableState {
     /// @param _tokenIn Token to spend
     /// @param _tokenOut Token to receive
     /// @param _amountIn Amount of _tokenIn to spend in swap
-    /// @param _fee Pool fee (300, 5000, 10000)
+    /// @param _fee Pool fee (500, 3000, 10000)
     function _getAmountOut(
         address _tokenIn,
         address _tokenOut,
