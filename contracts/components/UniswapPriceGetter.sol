@@ -3,12 +3,12 @@ pragma solidity ^0.8.4;
 
 import {IUniswapV3PoolState} from "@uniswap/v3-core/contracts/interfaces/pool/IUniswapV3PoolState.sol";
 
-import {StateImmutable} from "../base/StateImmutable.sol";
+import {ImmutableState} from "../base/ImmutableState.sol";
 import {SqrtPriceX96Math} from "../libraries/SqrtPriceX96Math.sol";
 
 error PoolDoesNotExist();
 
-abstract contract UniswapPriceGetter is StateImmutable {
+abstract contract UniswapPriceGetter is ImmutableState {
     /// @param _tokenIn Token to spend
     /// @param _tokenOut Token to receive
     /// @param _amountIn Amount of _tokenIn to spend in swap

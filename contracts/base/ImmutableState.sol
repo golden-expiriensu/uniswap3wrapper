@@ -5,7 +5,7 @@ import {IUniswapV3Factory} from "@uniswap/v3-core/contracts/interfaces/IUniswapV
 
 error PoolDoesNotExist();
 
-abstract contract StateImmutable {
+abstract contract ImmutableState {
     IUniswapV3Factory internal immutable uniswapV3Factory;
 
     constructor(address _uniswapV3Factory) {
