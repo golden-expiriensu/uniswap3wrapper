@@ -1,8 +1,6 @@
 import { DeployFunction } from 'hardhat-deploy/types'
 import { HardhatRuntimeEnvironment } from 'hardhat/types'
 
-import { verify } from '../helpers'
-
 const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   const { deployments, getNamedAccounts } = hre
   const { deploy } = deployments
@@ -15,8 +13,6 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
     args,
     log: true,
   })
-
-  await verify(hre, 'MockUniswapRouter', args)
 }
 
 export default func
