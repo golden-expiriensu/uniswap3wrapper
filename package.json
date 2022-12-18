@@ -55,6 +55,6 @@
   },
   "dependencies": {
     "@openzeppelin/contracts": "^4.7.0",
-    "@uniswap/v3-core": "^1.0.1"
+    "@uniswap/v3-core": "1.0.2-solc-0.8-simulate"
   }
 }

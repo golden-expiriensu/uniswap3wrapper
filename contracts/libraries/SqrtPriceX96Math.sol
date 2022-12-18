@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.4;
 
+import {FullMath} from "@uniswap/v3-core/contracts/libraries/FullMath.sol";
 import {Address} from "./Address.sol";
 
 error AmountInIsTooLarge();
@@ -19,13 +20,11 @@ library SqrtPriceX96Math {
 
         // prettier-ignore
         if (_tokenIn == token0) {
-            unchecked {
-                return (((_amountIn * (_sqrtPriceX96 / 2**16)) / 2**80) * _sqrtPriceX96) / 2**96;
-            }
+            uint256 amountMulPrice = FullMath.mulDiv(_amountIn, _sqrtPriceX96, 2**16);
+            return FullMath.mulDiv(amountMulPrice, _sqrtPriceX96, 2**176);
         } else {
-            unchecked {
-                return (((_amountIn * 2**144) / _sqrtPriceX96) * 2**48) / _sqrtPriceX96;
-            }
+            uint256 amountMul192 = FullMath.mulDiv(_amountIn, 2**192, _sqrtPriceX96);
+            return amountMul192 / _sqrtPriceX96;
         }
     }
 }

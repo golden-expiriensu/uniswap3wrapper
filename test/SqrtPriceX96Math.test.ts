@@ -28,7 +28,7 @@ describe('SqrtPriceX96 Math tests', () => {
     // 1 USDT = 0.00077 WETH
     const amountOut01 = await lib.getAmountOutWithinSingleTick(address00, address01, parse6(1), usdcX96weth)
 
-    expect(format18(amountOut01)).eq('0.000774860650758074')
+    expect(format18(amountOut01)).eq('0.000774860650778562')
   })
 
   it('Should correctly calculate amountOut where USDC > WETH', async () => {

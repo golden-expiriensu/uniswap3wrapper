@@ -12,7 +12,7 @@ specifiers:
   '@types/node': ^12.0.0
   '@typescript-eslint/eslint-plugin': ^5.46.0
   '@typescript-eslint/parser': ^5.46.0
-  '@uniswap/v3-core': ^1.0.1
+  '@uniswap/v3-core': 1.0.2-solc-0.8-simulate
   chai: ^4.2.0
   coverage: ^0.4.1
   dotenv: ^10.0.0
@@ -40,7 +40,7 @@ specifiers:
 
 dependencies:
   '@openzeppelin/contracts': 4.8.0
-  '@uniswap/v3-core': 1.0.1
+  '@uniswap/v3-core': 1.0.2-solc-0.8-simulate
 
 devDependencies:
   '@nomiclabs/hardhat-ethers': /hardhat-deploy-ethers/0.3.0-beta.13_yab2ug5tvye2kp6e24l5x3z7uy
@@ -1481,8 +1481,8 @@ packages:
       eslint-visitor-keys: 3.3.0
     dev: true
 
-  /@uniswap/v3-core/1.0.1:
-    resolution: {integrity: sha512-7pVk4hEm00j9tc71Y9+ssYpO6ytkeI0y7WE9P6UcmNzhxPePwyAxImuhVsTqWK9YFvzgtvzJHi64pBl4jUzKMQ==}
+  /@uniswap/v3-core/1.0.2-solc-0.8-simulate:
+    resolution: {integrity: sha512-ALAZbsb3wvUrRzeAjrTKjv1fH7UrueJ/+D8uX4yintXHxxzbnnp78Kis2pa4D26cFQ72rwM3DrZpUES9rhsEuQ==}
     engines: {node: '>=10'}
     dev: false
 
