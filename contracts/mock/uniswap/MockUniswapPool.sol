@@ -4,10 +4,6 @@ pragma solidity ^0.8.4;
 contract MockUniswapPool {
     uint160 internal sqrtPriceX96;
 
-    constructor(uint160 _sqrtPriceX96) {
-        sqrtPriceX96 = _sqrtPriceX96;
-    }
-
     function slot0()
         external
         view
@@ -22,5 +18,9 @@ contract MockUniswapPool {
         )
     {
         return (sqrtPriceX96, 0, 0, 0, 0, 0, false);
+    }
+
+    function setSqrtPriceX96(uint160 _value) external {
+        sqrtPriceX96 = _value;
     }
 }
