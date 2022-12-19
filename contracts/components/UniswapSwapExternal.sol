@@ -3,14 +3,14 @@ pragma solidity ^0.8.4;
 
 import {ISwapRouter} from "@uniswap/v3-periphery/contracts/interfaces/ISwapRouter.sol";
 
-import {ImmutableState} from "../base/ImmutableState.sol";
+import {PoolGetter} from "../base/PoolGetter.sol";
 
 /// @dev This contract utilizes UniswapV3 periphery router
 /// @dev therefore it has gas overflow because of call to external contract
 /// @dev Useful if final contract has not enough space to accommodate UniswapSwapInternal
-abstract contract UniswapSwapExternal is ImmutableState {
+abstract contract UniswapSwapExternal is PoolGetter {
     ISwapRouter internal immutable uniswapV3Router;
-    
+
     constructor(address _uniswapV3Router) {
         uniswapV3Router = ISwapRouter(_uniswapV3Router);
     }
